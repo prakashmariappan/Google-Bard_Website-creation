@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendy Threads</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        .welcome {
+            text-align: center;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        article.product {
+            width: 45%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .price {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trendy Threads</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2 class="welcome">Welcome to Trendy Threads!</h2>
+            <p>Discover your new favorite outfit with our wide selection of stylish and comfortable clothing.</p>
+            <img src="images/banner.jpg" alt="Fashion banner image">
+        </section>
+
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product-container">
+                <article class="product">
+                    <img src="images/dress1.jpg" alt="Blue Dress">
+                    <h3>Flowy Blue Dress</h3>
+                    <p>This elegant blue dress is perfect for a summer day out. Made with soft and breathable fabric, it features a flattering A-line silhouette and a cute tie waist. Add a touch of sophistication to your wardrobe with this timeless piece.</p>
+                    <p class="price">$59.99</p>
+                    <form action="#">
+                        <label for="qty">Quantity:</label>
+                        <input type="number" id="qty" name="qty" min="1" value="1">
+                        <button type="button" onclick="addToCart('Blue Dress', 59.99)">Add to Cart</button>
+                    </form>
+                </article>
+
+                <article class="product">
+                    <img src="images/shirt1.jpg" alt="Striped Shirt">
+                    <h3>Striped Cotton Shirt</h3>
+                    <p>This casual striped shirt is a wardrobe essential. Crafted from 100% cotton, it's soft, breathable, and perfect for everyday wear. Pair it with jeans for a relaxed look or dress it up with slacks for a more polished appearance.</p>
+                    <p class="price">$24.99</p>
+                    <form action="#">
+                        <label for="qty">Quantity:</label>
+                        <input type="number" id="qty" name="qty" min="1" value="1">
+                        <button type="button" onclick="addToCart('Striped Shirt', 24.99)">Add to Cart</button>
+                    </form>
+                </article>
+
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Trendy Threads 2024</p>
+    </footer>
+
+    <script>
+        function addToCart(productName, price) {
+            // Simulate adding item to cart (for now, display an alert)
+            alert("You've added " + productName + " to your cart for $" + price);
+        }
+    </script>
+</body>
+</html>
